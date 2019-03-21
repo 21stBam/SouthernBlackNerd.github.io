@@ -1,4 +1,6 @@
 # SouthernBlackNerd.github.io
-Homepage
+Homepage + Blog
 
-This is my Homepage starter files. I will be updating this with more information. In the future I will look at using either hyde or jekyll to add blog functionality to the site.
+## Under Construction
+
+This is my homepage and blog. I will be using it to display my thoughts and track my progress with different technologies that I am learning. First I will be importing different projects that I have completed and discussing what I learned, then track my progress as I dive into fastai's deep learning course

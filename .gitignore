@@ -1,0 +1,10 @@
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Nikola
+cache
+.doit.db
+__pycache__
+output
