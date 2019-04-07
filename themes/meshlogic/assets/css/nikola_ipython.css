@@ -1,0 +1,286 @@
+/*******************************************************************************
+** Header Titles
+*******************************************************************************/
+.rendered_html h2 {
+    display: none;     /* Hide the main title !! */
+}
+.rendered_html h3 {
+    font-size: 27px;
+}
+.rendered_html h4 {
+    font-size: 22px;
+}
+.rendered_html h5 {
+    font-size: 18px;
+}
+.rendered_html h1, .rendered_html h2, .rendered_html h3, .rendered_html h4, .rendered_html h5 {
+    color: #555;
+    font-family: Oswald;
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 1.2;
+
+    margin-top: 1.7em !important;
+    margin-bottom: 12px;
+}
+.rendered_html h1 a, .rendered_html h2 a, .rendered_html h3 a, .rendered_html h4 a, .rendered_html h5 a {
+    display: none;
+}
+
+
+/*******************************************************************************
+** Notebook Containers
+*******************************************************************************/
+#notebook {
+    outline: 0;
+}
+#notebook-container {
+	width: 100%;
+	padding: 0;
+}
+
+/*** Container for each cell ***/
+div.cell {
+    padding: 0px 0px;   
+    margin-bottom: 16px;  /* Vertical gap between cells !! */
+    border: 0;
+}
+div.inner_cell {
+}
+
+
+/*******************************************************************************
+** Content cells
+*******************************************************************************/
+div.rendered_html {
+    overflow-x: hidden !important;
+}
+
+/* Text */
+div.text_cell_render {
+    color: #222;
+    margin: 0;
+    padding: 0;
+}
+
+div.rendered_html p {
+    margin-top: 0;         /* Paragraph top gap !! */
+    margin-bottom: 1em;    /* Paragraph bottom gap !! */
+    text-align: justify;
+}
+div.rendered_html p:last-child {
+    margin-bottom: 0px;     /* Disable bottom gap for the last <p> !! */
+}
+
+/* Images */
+div.rendered_html img {
+    margin: 1.2em auto 1.2em auto;
+}
+div.rendered_html img.align-left {
+    margin: 0 1em 0 0 !important;
+}
+div.rendered_html img.align-right {
+    margin: 0 0 0 1em !important;
+}
+
+/* Lists */
+div.rendered_html ul, .rendered_html ol {
+    margin: 0 0 1em 0 !important;
+    padding-left: 40px !important;
+}
+div.rendered_html li {
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+/* Links */
+div.rendered_html :visited, div.rendered_html :link {
+    text-decoration: none;
+}
+div.rendered_html a:hover {
+    text-decoration: underline;
+}
+
+
+/*******************************************************************************
+** Left side In/Out prompt "In [12]:" 
+*******************************************************************************/
+div.prompt {
+    background-color: rgba(0, 0, 0, 0.075);
+    border: 0;
+    border-radius: 0px;
+
+    font-family: Consolas, Monaco, 'Andale Mono', monospace;
+    font-size: 13px;
+    line-height: 18px;
+    text-align: right;
+    padding: 8px 2px;
+    
+    width: 70px;
+    min-width: 70px;
+    margin: 0;
+    margin-right: 15px;
+
+    display: none;
+}
+div.input_prompt {
+    color: #303f9f;
+    /* color: #2556AA; */
+}
+
+/* Display prompt only for specific cells */
+/* div.prompt {
+    display: none;
+}
+div.text_cell div.prompt {
+    display:  block;
+}
+div.input div.prompt {
+    display:  block;
+}
+div.output div.prompt {
+    display:  block;
+} */
+
+
+/*******************************************************************************
+** IN-LINE Code
+*******************************************************************************/
+.rendered_html code {
+    background-color: rgba(128, 128, 128, 0.15);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+    padding: 2px 4px 2px;
+
+    color: #000 !important;
+    font-size: 13px;
+    vertical-align: 4%;
+    white-space: nowrap;
+}
+
+
+/*******************************************************************************
+** Code Blocks
+*******************************************************************************/
+/*** Code Input Area ***/
+div.input_area {
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 12px;
+}
+
+/*** Code blocks ***/
+div.input_area > div.highlight  
+{
+    border-radius: 5px;
+    margin: 0;
+    padding: 8px 15px;
+}
+
+div.input_area > div.highlight > pre {
+    border-radius: 0;
+}
+
+/*** Output area ***/
+div.output_wrapper {
+}
+
+/* Both text and image output */
+div.output_subarea {
+    margin: 0px 0 20px 0;
+    padding: 0;
+    max-width: none; 
+}
+
+/* Text output */
+div.output_text {
+    padding: 0px 15px;
+}
+div.output_area pre {
+    color: #2556AA;
+    font-weight: bold;
+}
+
+/* Image output */
+div.output_png {
+    margin-top: 0px;
+    padding: 0;
+}
+
+
+
+/*******************************************************************************
+** PRINT STYLE
+*******************************************************************************/
+@media print {
+    div.prompt {
+        display: none !important;
+    }
+
+    .cell, .input, .inner_cell, .input_area, .highlight, pre {
+        overflow: visible !important;
+        display: block !important;
+        page-break-inside: auto !important;
+    }
+
+    /* Comments */
+    .code .c  , .highlight .c,  
+    .code .ch , .highlight .ch, 
+    .code .cm , .highlight .cm,
+    .code .cp , .highlight .cp, 
+    .code .cpf, .highlight .cpf,
+    .code .c1 , .highlight .c1, 
+    .code .cs , .highlight .cs {
+        color: #209020 !important;
+        font-style: italic !important;
+    } 
+
+    /* Keywords */
+    .code .k  , .highlight .k, 
+    .code .kd , .highlight .kd,
+    .code .kp , .highlight .kp,
+    .code .kr , .highlight .kr,
+    .code .kt , .highlight .kt,
+    .code .ow , .highlight .ow,
+    .code .kn , .highlight .kn,
+    .code .kc , .highlight .kc,
+    .code .bp , .highlight .bp {
+        color: #0000ff !important;
+        font-weight: bold !important;
+    }
+    
+    /* Strings */
+    .code .s  , .highlight .s ,
+    .code .sa , .highlight .sa,
+    .code .sb , .highlight .sb,
+    .code .sc , .highlight .sc,
+    .code .dl , .highlight .dl,
+    .code .sd , .highlight .sd,
+    .code .s2 , .highlight .s2,
+    .code .sh , .highlight .sh,
+    .code .si , .highlight .si,
+    .code .sx , .highlight .sx,
+    .code .sr , .highlight .sr,
+    .code .s1 , .highlight .s1,
+    .code .ss , .highlight .ss,
+    .code .ld , .highlight .ld,
+    .code .se , .highlight .se {
+        color: #A05000 !important;
+    }
+
+    /* Literals */
+    .code .l  , .highlight .l,
+    .code .m  , .highlight .m,
+    .code .mb , .highlight .mb,
+    .code .mf , .highlight .mf,
+    .code .mh , .highlight .mh,
+    .code .mi , .highlight .mi,
+    .code .il , .highlight .il,
+    .code .mo , .highlight .mo {
+        color: #900090 !important;
+    }
+}
+
+
