@@ -7,6 +7,10 @@
 .. link: 
 .. description: 
 .. type: text
+.. status: private
 -->
 
-Write your page here.
+# Resume
+## Under Construction
+* Fix template and CSS
+* Populate with project and other information
